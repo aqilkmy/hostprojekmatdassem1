@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral Tak Tentu</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <form action="/" method="GET">
+        <input type="submit" value="Home">
+    </form>
+    <h1>Integral Tak Tentu</h1>
+    <form action="/integral-tentu" method="POST">
+        <label for="func">Masukkan fungsi:</label>
+        <input type="text" id="func" name="func" required><br><br>
+        <label for="bts-bwh">Masukkan batas bawah:</label>
+        <input type="text" id="bts-bwh" name="bts-bwh" required><br><br>
+        <label for="bts-ats">Masukkan batas atas:</label>
+        <input type="text" id="bts-ats" name="bts-ats" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if soal %}
+        <p>Integral tak tentu dari : </p>
+        <pre>{{ soal }}</pre>
+        <p>batas atas : {{ b }}</p>
+        <p>batas bawah : {{ a }}</p>
+    {% endif %}
+    {% if soal %}
+        <pre> adalah: {{ hasil }}</pre>
+        
+    {% endif %}
+</body>
+</html>
